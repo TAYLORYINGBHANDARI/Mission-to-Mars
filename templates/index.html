@@ -9,15 +9,30 @@
      rel="stylesheet"
      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
    />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <style>
+    body {background-color: rgb(5, 5, 5);}
+    h1   {color: rgb(240, 6, 6);font-weight: bold;font-family:'Times New Roman', Times, serif;}
+    h2   {color: rgb(255, 255, 255);font-weight: bold;font-family:'Times New Roman', Times, serif;}
+    h3   {color: rgb(2, 2, 2);font-weight: bold;font-family:Arial, Helvetica, sans-serif;}
+    h4   {color: rgb(253, 165, 92);font-weight: bold;font-family:'Times New Roman', Times, serif;}
+
+
+    p    {color: rgb(255, 255, 255);font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+
+          
+    </style>
+
 </head>
 <body>
     <div class="container">
          <!-- Add Jumbotron to Header -->
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center" style="background-image:url(../static/img1.jpg); background-size: 100%; height: 100%;">
             <h1>Mission to Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape"
-                role="button">Scrape New Data</a></p> 
-        </div>>
+            <p><a class="btn btn-lg text-white" style="background-color:#9a99a1;" href="/scrape"
+                role="button" >Scrape New Data</a></p> 
+        </div>
 
         <!-- Mars News -->
         <div class="row" id="mars-news">
@@ -44,7 +59,7 @@
                 <!-- Mars Facts -->
                 <div class="row" id="mars-facts">
                     <h4>Mars Facts</h4>
-                    {{ mars.facts | safe }}
+                    <table border="2">{{ mars.facts | safe }}</table>
                 </div>
 
 
